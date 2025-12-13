@@ -1,1 +1,21 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  --font-family-variable: 'Inter';
+  --font-family: 'PressStart2P';
+  --font-weight-card-title: 715;
+  --font-weight-card-title-inter: 715;
+  --font-weight-card-text-inter: 410;
+  --font-weight-text: 400;
+  --font-weight-card-button: 400;
+  --contour-color-svg: #000;
+  --accent-color: #000000; /* Акцентный цвет */
+  --text-color: #ffffff;   /* Цвет текста */
+  --hover-bg: #000000;     /* Цвет фона при наведении */
+  --contour-color: #000000; /* Цвет контура */
+  --animation-fill-color: #FF0000; /* Цвет заливки для анимации */
+  --contour-color: #000000;      /* Чёрный контур по умолчанию */
+  --main-body-color: #000000;    /* Чёрное основное тело при наведении */
+  --core-color: #000000;         /* Чёрная сердцевина при наведении */
+  --sparks-color: #FF0000;    
+  --active-color: #FF0000;
+}

@@ -9,3 +9,43 @@
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 */
+
+/* Анимация масштабирования сердца */
+@keyframes scale-heart {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Анимация для искр - появляются и исчезают */
+@keyframes sparks-flash {
+  0% {
+    opacity: 0;
+    fill: transparent;
+  }
+  50% {
+    opacity: 1;
+    fill: var(--sparks-color);
+  }
+  100% {
+    opacity: 0;
+    fill: transparent;
+  }
+}
+
+/* Применяем анимации */
+.like-icon.is-liked {
+  animation: scale-heart 0.3s ease-in 0.1s 1;
+  transform-origin: center;
+}
+
+/* Искры вспыхивают и исчезают */
+.like-icon.is-liked .sparks {
+  animation: sparks-flash 0.3s ease-in 0.3s 1 forwards;
+}
