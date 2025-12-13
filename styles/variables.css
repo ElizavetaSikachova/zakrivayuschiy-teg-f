@@ -1,10 +1,11 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
-  --font-family-variable: 'Inter';
+  --font-family-variable: 'Inter-Variable';
   --font-family: 'PressStart2P';
-  --font-weight-card-title: 715;
-  --font-weight-card-title-inter: 715;
-  --font-weight-card-text-inter: 410;
+  --font-variation-title: 'wght' 715;
+  --font-variation-text: 'wght' 410;
+  --font-variation-normal: 'wght' 400;
+  --font-title: 400;
   --font-weight-text: 400;
   --font-weight-card-button: 400;
   --contour-color-svg: #000;
@@ -16,6 +17,6 @@
   --contour-color: #000000;
   --main-body-color: #000000;
   --core-color: #000000;
-  --sparks-color: #FF0000;  
+  --sparks-color: #FF0000;
   --active-color: #FF0000;
 }

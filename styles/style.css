@@ -64,7 +64,7 @@
 
 .title {
   font-family: var(--font-family);
-  font-weight: 400;
+  font-weight: var(--font-title);
   font-size: clamp(49px, 6vw, 65px);
   line-height: 100%;
   text-transform: uppercase;
@@ -73,7 +73,7 @@
 
 .subtitle {
   font-family: var(--font-family);
-  font-weight: 400;
+  font-weight: var(--font-title);
   font-size: clamp(14px, 2vw, 23px);
   line-height: 100%;
   text-transform: uppercase;
@@ -115,7 +115,7 @@ main {
 
 .card__title {
   font-family: var(--font-family-variable);
-  font-weight: var(--font-weight-card-title-inter);
+  font-variation-settings: var(--font-variation-title);
   font-size: 18px;
   line-height: 100%;
   vertical-align: middle;
@@ -125,7 +125,7 @@ main {
 
 .card__text {
   font-family: var(--font-family-variable);
-  font-weight: var(--font-weight-card-text-inter);
+  font-variation-settings: var(--font-variation-text);
   font-size: 18px;
   line-height: 21px;
   padding-left: 26px;
@@ -164,14 +164,6 @@ main {
 
 .button__position {
   margin-top: 22px;
-}
-
-.button__text {
-  font-family: var(--font-family);
-  font-weight: var(--font-weight-card-button);
-  font-size: 14px;
-  line-height: 90%;
-  padding-right: 2px;
 }
 
 .card__buttons {
@@ -223,15 +215,6 @@ main {
   font-size: 14px;
   line-height: 150%;
   margin-block-start: 13px;
-}
-
-.dialog__button-close {
-  width: 293px;
-  height: 38px;
-  background: transparent;
-  border: 2px solid #000;
-  margin-block-start: 32px;
-  margin-inline-start: 10px;
 }
 
 .image-grayscale {
@@ -555,7 +538,6 @@ main {
 @supports ((text-stroke: 1px #fff) or (-webkit-text-stroke: 1px #fff)) {
   .html-tag-overlay {
     color: transparent;
-    -webkit-text-stroke: 1px #fff;
     -webkit-text-stroke: 1px #fff;
     text-shadow: none;
   }
