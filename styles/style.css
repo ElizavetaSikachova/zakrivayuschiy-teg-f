@@ -65,7 +65,7 @@
 .title {
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: clamp(49px, 6vw, 65px);;
+  font-size: clamp(49px, 6vw, 65px);
   line-height: 100%;
   text-transform: uppercase;
   padding-bottom: 20px;
@@ -232,13 +232,6 @@ main {
   border: 2px solid #000;
   margin-block-start: 32px;
   margin-inline-start: 10px;
-}
-
-.dialog__text {
-  font-family: var(--font-family);
-  font-weight: var(--font-weight-text);
-  font-size: 14px;
-  line-height: 150%;
 }
 
 .image-grayscale {
@@ -489,57 +482,38 @@ main {
 }
 
 .like-icon:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
-/* Контур */
 .like-icon .contour {
-    fill: var(--contour-color);
-    transition: fill 0.1s linear;
+  fill: var(--contour-color);
+  transition: fill 0.1s linear;
 }
 
-/* Основное тело - переход управляется по-разному для появления и исчезания */
 .like-icon .main-body {
-    fill: transparent;
-    /* Устанавливаем transition только для fill с задержкой 0s */
-    transition: fill 0.3s linear;
+  fill: transparent;
+  transition: fill 0.3s linear;
 }
 
-/* Сердцевина - переход управляется по-разному для появления и исчезания */
 .like-icon .core {
-    fill: transparent;
-    /* Устанавливаем transition только для fill с задержкой 0.03s */
-    transition: fill 0.3s linear 0.03s;
+  fill: transparent;
+  transition: fill 0.3s linear 0.03s;
 }
 
-/* Искры (пока оставляем прозрачными) */
 .like-icon .sparks {
-    fill: transparent;
-    opacity: 0;
+  fill: transparent;
+  opacity: 0;
 }
 
-/* ===== СОСТОЯНИЕ ПРИ НАВЕДЕНИИ (:hover) ===== */
-
-/* При наведении меняем только transition-delay, не весь transition */
 .like-icon:hover .core {
-    fill: var(--core-color);
-    /* Убираем задержку для появления */
-    transition-delay: 0s;
+  fill: var(--core-color);
+  transition-delay: 0s;
 }
 
 .like-icon:hover .main-body {
-    fill: var(--main-body-color);
-    /* Добавляем задержку для последовательного появления */
-    transition-delay: 0.05s;
+  fill: var(--main-body-color);
+  transition-delay: 0.05s;
 }
-
-
-
-
-
-
-
-/* ===== СОСТОЯНИЕ ПРИ НАЖАТИИ (:active) ===== */
 
 .card__icon-button:active .like-icon .core {
   fill: var(--active-color);
@@ -551,46 +525,53 @@ main {
   transition-delay: 0.05s;
 }
 
-/* Небольшое сжатие при нажатии */
 .card__icon-button:active .like-icon {
   transform: scale(0.95);
 }
 
-/* Отменяем hover-эффекты при активном состоянии */
 .card__icon-button:active .like-icon:hover {
   transform: scale(0.95);
 }
 
-/* ===== СОСТОЯНИЕ ПРИ КЛИКЕ (is-liked) ===== */
-
-/* Сердцевина при клике */
 .like-icon.is-liked .core {
   fill: var(--active-color);
   transition-delay: 0s;
 }
 
-/* Основное тело при клике */
 .like-icon.is-liked .main-body {
   fill: var(--active-color);
   transition-delay: 0.05s;
 }
 
-/* Контур при клике */
 .like-icon.is-liked .contour {
   fill: var(--active-color);
   transition: fill 0.3s linear 0.06s;
 }
 
-/* Искры при клике */
 .like-icon.is-liked .sparks {
   fill: var(--sparks-color);
 }
 
+@supports ((text-stroke: 1px #fff) or (-webkit-text-stroke: 1px #fff)) {
+  .html-tag-overlay {
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    -webkit-text-stroke: 1px #fff;
+    text-shadow: none;
+  }
+}
 
-
-
-
-
+@supports not ((text-stroke: 1px #fff) or (-webkit-text-stroke: 1px #fff)) {
+  .html-tag-overlay {
+    text-shadow: 
+      -1px -1px 0 #FFFFFF,
+      1px -1px 0 #FFFFFF,
+      -1px 1px 0 #FFFFFF,
+      1px 1px 0 #FFFFFF,
+      0 0 4px #FFFFFF,
+      0 0 8px #FFFFFF;
+  }
+}
 
 @media (width <= 375px) {
   .page {

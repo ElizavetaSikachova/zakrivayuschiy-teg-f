@@ -23,7 +23,6 @@
   }
 }
 
-/* Анимация для искр - появляются и исчезают */
 @keyframes sparks-flash {
   0% {
     opacity: 0;
@@ -39,13 +38,11 @@
   }
 }
 
-/* Применяем анимации */
 .like-icon.is-liked {
   animation: scale-heart 0.3s ease-in 0.1s 1;
   transform-origin: center;
 }
 
-/* Искры вспыхивают и исчезают */
 .like-icon.is-liked .sparks {
   animation: sparks-flash 0.3s ease-in 0.3s 1 forwards;
 }
