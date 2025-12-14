@@ -261,11 +261,6 @@ main {
     saturate(1.3);
 }
 
-
-
-
-
-
 .card__like-button {
   width: 130px;
   height: 38px;
@@ -321,7 +316,7 @@ main {
 }
 
 .save__button:hover .button__text {
-  color: var(--text-color); 
+  color: var(--text-color);
   mix-blend-mode: difference;
 }
 
@@ -370,21 +365,6 @@ main {
   transform: translateY(1px);
 }
 
-.dialog__button-close {
-  width: 293px;
-  height: 38px;
-  margin-block-start: 32px;
-  margin-inline-start: 10px;
-  line-height: 90%;
-}
-
-.button__text {
-  font-family: var(--font-family), sans-serif;
-  font-weight: var(--font-weight-card-button);
-  font-size: 14px;
-  line-height: 90%;
-}
-
 .dialog__button-close .button__text,
 .card__like-button .button__text {
   position: relative;
@@ -396,11 +376,6 @@ main {
   justify-content: center;
   width: 100%;
   height: 100%;
-}
-
-.save_icon {
-  width: 21px;
-  height: 21px;
 }
 
 .dialog__button-close {
